@@ -3,11 +3,15 @@ const routes = require("./routes");
 
 // Create the new server
 const app = express();
+//Before telling the engine where rhe recources will be stored,first we require the path
+const path = required("path");
+
 
 //Tell the server that we will use pug (Enable pug)
 app.set('view engine', 'pug');
 
-//
+//Tell express where the views are going to be saved
+app.set("views", path.join(__dirname,"./views"));
 
 // Listen for the homepage
 /**
