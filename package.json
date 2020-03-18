@@ -1,0 +1,32 @@
+{
+  "name": "website-nodejs-express-sequelize-pug-bootstrap",
+  "version": "1.0.0",
+  "description": "\"Building a website using NodeJS,Express Sequelize, pug, Bootstrap by Albert Eloumbat Assoua from udemy Course\"",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AssouaAlbert/IntroNodeJS.git"
+  },
+  "keywords": [
+    "\"eloumbat\"",
+    "assoua",
+    "albert",
+    "website",
+    "nodejs",
+    "udemy"
+  ],
+  "author": "Albert Eloumbat Assoua",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AssouaAlbert/IntroNodeJS/issues"
+  },
+  "homepage": "https://github.com/AssouaAlbert/IntroNodeJS#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2"
+  }
+}
