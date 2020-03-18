@@ -2,7 +2,7 @@
   "name": "website-nodejs-express-sequelize-pug-bootstrap",
   "version": "1.0.0",
   "description": "\"Building a website using NodeJS,Express Sequelize, pug, Bootstrap by Albert Eloumbat Assoua from udemy Course\"",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
