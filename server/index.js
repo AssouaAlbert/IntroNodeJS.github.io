@@ -13,3 +13,9 @@ app.use('/', (req, res) => {
 
 // Run the application
 app.listen(3000);
+/**
+ * app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+ * this line can still be used to replace the one at the top 
+ * port: 3000
+ * and after every change console log...
+ */
