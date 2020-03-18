@@ -5,11 +5,11 @@ const router = express.Router(); // router will contain all the methods that the
 
 module.exports = function () {
     //Home page url
-    router.use('/', (req, res) => {
+    router.get('/', (req, res) => {
         res.send("Hello World in NodJS");
     });
     //About us page
-    router.use('/aboutus', (req, res) => {
+    router.get('/aboutus', (req, res) => {
         res.send("about Us");
     });
 }

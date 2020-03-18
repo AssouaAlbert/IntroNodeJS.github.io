@@ -15,6 +15,7 @@ const app = express();
 });
  */
 //Execute the funtion the routes folder
+app.use('/', routes());
 
 
 // Run the application
