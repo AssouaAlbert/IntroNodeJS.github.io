@@ -1,4 +1,5 @@
-const express = require('express');
+const express = require("express");
+const routes = require("./routes");
 
 // Create the new server
 const app = express();
@@ -13,6 +14,7 @@ const app = express();
     res.send("Hello World in NodJS");
 });
  */
+//Execute the funtion the routes folder
 
 
 // Run the application
