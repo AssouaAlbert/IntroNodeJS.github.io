@@ -4,6 +4,10 @@ const routes = require("./routes");
 // Create the new server
 const app = express();
 
+//Tell the server that we will use pug (Enable pug)
+app.set('view engine', 'pug');
+
+//
 
 // Listen for the homepage
 /**
