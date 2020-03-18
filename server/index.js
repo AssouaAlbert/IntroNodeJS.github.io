@@ -6,7 +6,7 @@ const app = express();
 
 
 // Listen for the homepage
-
+app.use('/');
 
 
 // Run the application
