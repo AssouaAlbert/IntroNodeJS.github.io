@@ -1,10 +1,11 @@
 const express = require("express");
 const routes = require("./routes");
+//Before telling the engine where rhe recources will be stored,first we require the path
+const path = require("path");
 
 // Create the new server
 const app = express();
-//Before telling the engine where rhe recources will be stored,first we require the path
-const path = required("path");
+
 
 
 //Tell the server that we will use pug (Enable pug)
