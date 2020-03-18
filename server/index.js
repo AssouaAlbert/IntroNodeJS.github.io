@@ -12,3 +12,4 @@ app.use('/', (req, res) => {
 
 
 // Run the application
+app.listen(3000);
