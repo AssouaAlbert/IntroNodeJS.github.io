@@ -5,7 +5,6 @@ const routes = require("./routes");
 const app = express();
 
 
-
 // Listen for the homepage
 /**
  * This code has been move to the index.js file ins the route folder
@@ -15,7 +14,7 @@ const app = express();
 });
  */
 //Execute the funtion the routes folder
-app.use('/', routes());
+app.use('/',routes);
 
 
 // Run the application
