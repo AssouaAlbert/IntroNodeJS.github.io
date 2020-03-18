@@ -6,9 +6,13 @@ const app = express();
 
 
 // Listen for the homepage
-app.use('/', (req, res) => {
+/**
+ * This code has been move to the index.js file ins the route folder
+ * Is is for distribution of concern
+ * app.use('/', (req, res) => {
     res.send("Hello World in NodJS");
 });
+ */
 
 
 // Run the application
