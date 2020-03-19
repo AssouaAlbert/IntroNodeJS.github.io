@@ -10,10 +10,14 @@ const configs = require("./config");
 // Filter the current environment developement or production
 //app.get['env'] will return "developement" or "production based on the server" e.g. in webpack --mode development or --mode production 
 const config = configs[app.get('env')];
-
-
 //Tell the server that we will use pug (Enable pug)
 app.set('view engine', 'pug');
+//Import the database connection
+const db = require('./config/database');
+//Create a connection
+db.authenticate()
+    .then(()=>console.log('Database Connected'))
+    .catch((e)=>console.log("Error: ", e))
 
 //Tell express where the views are going to be saved
 app.set("views", path.join(__dirname,"./views"));
