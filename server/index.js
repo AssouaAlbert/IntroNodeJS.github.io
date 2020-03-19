@@ -1,4 +1,5 @@
 const express = require("express");
+//Import the modules from the rout folder
 const routes = require("./routes");
 //Before telling the engine where rhe recources will be stored,first we require the path
 const path = require("path");
