@@ -1,12 +1,15 @@
 const express = require("express");
-//Import the modules from the rout folder
+// Create the new server
+const app = express();
+//Import the modules from the route folder
 const routes = require("./routes");
 //Before telling the engine where rhe recources will be stored,first we require the path
 const path = require("path");
-
-// Create the new server
-const app = express();
-
+//Import the configurations
+const configs = require("./config");
+// Filter the current environment developement or production
+//app.get['env'] will return "developement" or "production based on the server" e.g. in webpack --mode development or --mode production 
+const config = configs[app.get('env')];
 
 
 //Tell the server that we will use pug (Enable pug)
@@ -26,6 +29,8 @@ app.use((req,res,next) => {
     //this will continue running the next function... ?
     return next();
 });
+//Parse the site name to the views
+app.locals.siteTitle = config.siteName;
 // Listen for the homepage
 /**
  * This code has been move to the index.js file ins the route folder

@@ -8,11 +8,15 @@ router.get('/home', (req, res) => {
     res.render("index");
 });
 router.get('/', (req, res) => {
-    res.render("index");
+    res.render("index",{
+        pageTitle : "Home"
+    });
 });
 //About us page
 router.get('/aboutus', (req, res) => {
-    res.render("about");
+    res.render("about", {
+        pageTitle : "About Us"
+    });
 });
 
 module.exports = router;
