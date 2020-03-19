@@ -13,7 +13,18 @@ app.set('view engine', 'pug');
 
 //Tell express where the views are going to be saved
 app.set("views", path.join(__dirname,"./views"));
-
+//load the assets folder
+//public is the name of the folder public
+app.use(express.static('public'))
+//Get year from users computer
+app.use((req,res,next) => {
+    const date = new Date().getFullYear();
+    //locals is a property in the response object
+    res.locals.currentYear = date;
+    console.log('date: ', date);
+    //this will continue running the next function... ?
+    return next();
+});
 // Listen for the homepage
 /**
  * This code has been move to the index.js file ins the route folder
