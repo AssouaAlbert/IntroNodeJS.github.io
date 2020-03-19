@@ -1,4 +1,25 @@
 extends ../layout/index.pug
 
 block content
-    h1 About Us
+    main.container.mt-5
+        .row    
+            .col-md-5
+                img.img-fluid(src="/img/about.jpg", alt="About Image", sizes="", srcset="")
+            .col-md-7
+                h1 #{pageTitle}
+                blockquote Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at pulvinar mauris. Duis molestie quis velit quis imperdiet. Nulla ultricies in enim quis varius. Aenean accumsan imperdiet lorem, a eleifend erat lobortis eu. Sed scelerisque gravida nulla sed venenatis. Mauris convallis nibh sit amet porta auctor.
+                p Nam eget congue sapien. Quisque lobortis ligula ac suscipit gravida. Mauris dignissim feugiat augue, ac pretium felis mattis egestas. Nullam sodales turpis vel urna efficitur maximus. Vivamus at magna in purus maximus feugiat vitae ut urna. Etiam ullamcorper euismod vehicula. 
+                p  Duis pulvinar nulla est, eget finibus lorem placerat auctor. Curabitur eleifend elementum lorem eu auctor. Quisque tincidunt facilisis eros. Maecenas in volutpat libero. Proin nec libero nunc. Nulla eget tellus purus. Nullam ac ipsum felis. Nulla lobortis commodo justo, sed consequat justo sollicitudin vel.
+            .icons-list.w-100
+                .container.mt-5.py-5.text-center
+                    .row
+                        .col-md-4
+                            img(src="/img/icon_trust.svg", alt="Trust Icon" class="img-fluid md-4")
+                            h2.m-4 Trust & Safety
+                        .col-md-4
+                            img(src="/img/icon_destiny.svg", alt="Trust Icon" class="img-fluid md-4")
+                            h2.m-4 Best Destinations
+                        .col-md-4
+                            img(src="/img/icon_price.svg", alt="Trust Icon" class="img-fluid md-4")
+                            h2.m-4 Best Price
+                            

@@ -1,18 +1,20 @@
+
+@import url(https://fonts.googleapis.com/css?family=Baloo+Chettan+2&display=swap);
 body {
     font-family: 'Open Sans', sans-serif;
 }
 h1, h2, h3 {
-    font-family: 'Staatliches', cursive;
+    font-family: 'Baloo Chettan 2', cursive;
     color: #15B9D5;
 }
 h1 {
-    font-size: 3.4rem;
+    font-size: 2.5rem;
 }
 h2 {
-    font-size: 2.4rem;
+    font-size: 1.5rem;
 }
 h3 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 .btn-success {
@@ -42,14 +44,14 @@ h3 {
 }
 .slider em {
     font-family: 'Covered By Your Grace', cursive;
-    font-size: 4rem;
+    font-size: 3rem;
     order: -1;
     line-height: .8;
     color: rgba(255, 255, 255, .5);
 }
 @media (min-width:768px) {
     .slider em {
-        font-size: 8rem;
+        font-size: 6rem;
     }
 }
 .home {
@@ -77,13 +79,13 @@ p {
     background-color: #15B9D5;
 }
 header .nav a {
-    font-family: 'Staatliches', cursive;
+    font-family: 'Baloo Chettan 2', cursive;
     font-size: 2rem;
     color: white;
 }
 footer .nav a,
 .copyright {
-    font-family: 'Staatliches', cursive;
+    font-family: 'Baloo Chettan 2', cursive;
     font-size: 1.6rem;
     color: black;
 }
