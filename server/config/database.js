@@ -9,4 +9,9 @@ const Sequeslize = require('sequeslize');
  * **Except you define the user name and password for the database
  */
 const sequeslize = new Sequeslize('ravelagency', 'root', {
-   
+    //host: 127.0.0.1
+    host: 'localhost',
+    port: 3306,
+    
+
+});
