@@ -1,0 +1,16 @@
+.row.upcoming-travels
+        each travel in travels
+            .col-md-4.col-md-4.md-4
+                .card.m-3
+                    img.card-img-top.img-fluid(src=`/img/destiny_${travel.image}.jpg` alt=`${travel.title}`)
+                    .card-body
+                        h2 #{travel.title}
+                        h6 Departure Date:
+                            p #{travel.departure_date}
+                        h6 Return Date:
+                            p #{travel.return_date}
+                        h6 Price
+                            p #{travel.price}
+                        h6 Description
+                            p #{travel.description.substring(0,100).concat(' ...')}
+                            a(href=`travel/${travel.id}`).btn.btn-success.btn-block More ...

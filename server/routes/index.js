@@ -13,10 +13,14 @@ router.get('/home', (req, res) => {
 router.get('/', (req, res) => {
     Travels.findAll({limit: 3})
     .then((travels)=>{
-        res.render("index",{
-            pageTitle : "Home",
-            className : 'home',
-            travels
+        Testimonials.findAll({limit:3})
+        .then((testimonials)=>{
+            res.render("index",{
+                pageTitle : "Home",
+                className : 'home',
+                travels,
+                testimonials
+            });
         });
     });
 });
@@ -40,10 +44,11 @@ router.get('/testimonials', (req, res) => {
     //Travels
 router.get('/travels', (req, res) => {
     Travels.findAll()
-    .then((response)=>{
+    .then((travels)=>{
+
         res.render("travels", {
             pageTitle : "Travels",
-            response //since the key and value are thesame you can parse the two
+            travels //since the key and value are thesame you can parse the two
         });
     })
 });
