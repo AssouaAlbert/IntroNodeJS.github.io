@@ -26,12 +26,16 @@ app.set("views", path.join(__dirname,"./views"));
 //load the assets folder
 //public is the name of the folder public
 app.use(express.static('public'))
-//Get year from users computer
+//Get year from users computern with no spath secification this will run globally
 app.use((req,res,next) => {
     const date = new Date().getFullYear();
     //locals is a property in the response object
     res.locals.currentYear = date;
     console.log('date: ', date);
+    //Console log the current path from the url
+    console.log(req.path);
+    res.locals.currentPage = req.path;
+    console.log(res.locals);
     //this will continue running the next function... ?
     return next();
 });

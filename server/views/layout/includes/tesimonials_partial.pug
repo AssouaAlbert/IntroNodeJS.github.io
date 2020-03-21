@@ -1,0 +1,12 @@
+if(testimonials)
+    blockquote.text-center Read Experiences from our clients
+    .row.testimonials
+            each testimonial in testimonials
+                .col-md-4.col-lg-4.mb-4
+                    .card
+                        .card-body
+                            blockquote.blockquote
+                            p.mb-0
+                                | #{testimonial.testimony}
+                            footer.blockquote-footer
+                                | #{testimonial.name}
