@@ -1,6 +1,8 @@
 const express = require("express");
 // Create the new server
 const app = express();
+//Import body-parser
+const bodyParser = require('body-parser');
 //Import the modules from the route folder
 const routes = require("./routes");
 //Before telling the engine where rhe recources will be stored,first we require the path
@@ -43,6 +45,7 @@ app.locals.siteTitle = config.siteName;
     res.send("Hello World in NodJS");
 });
  */
+app.use(bodyParser.urlencoded({extended: true}));
 //Execute the funtion the routes folder
 app.use('/',routes);
 

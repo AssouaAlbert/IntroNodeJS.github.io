@@ -5,20 +5,21 @@ block content
         .row    
             .col-md-12
                 h1.text-center=pageTitle
-
             .col-md-12
                 h1.text-center Add Testimonials
-
+                if(errors)
+                    each error in errors
+                        .alert.alert-danger.text-center=error.message
                 .row.justify-content-center
                     .col-md-8
                         form(action="/testimonials" method="POST")
                             .form-group.text-center
                                 label(for="name") Name
-                                input(id="name" type="text" class="form-control" name="name" placeholder="Your Name")
+                                input(id="name" type="text" class="form-control" name="name" placeholder="Your Name" value=name)
                             .form-group.text-center
                                 label(for="email") Email
-                                input(id="email" type="email" class="form-control" name="email" placeholder="Your Name")
+                                input(id="email" type="email" class="form-control" name="email" placeholder="Your Name" value=email)
                             .form-group.text-center
-                                label(for="testimonial") Testimonial
-                                textarea(id="testimonial" name="testimonial" cols="30" class="form-control" rows="5" placeholder="Message")
+                                label(for="testimony") Testimonial
+                                textarea(id="testimony" name="testimony" cols="30" class="form-control" rows="5" placeholder="Message")=testimony
                             input.btn.btn-success.btn-block(type="submit" value="Add Testimonial")
