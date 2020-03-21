@@ -44,5 +44,11 @@ router.get('/travel/:id', (req, res) => {
         });
     });
 });
+//Handle form submittion with post
+router.post('/testimonials', (req, res)=>{
+    //For this code to work you will need to insert the obody parsers
+    console.log(req.body); //Without body parser this will return undefine
+})
+
 
 module.exports = router;

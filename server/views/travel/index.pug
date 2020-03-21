@@ -1,1 +1,19 @@
 extends ../layout/index.pug
+
+block content
+    main.container.mt-5
+        .row    
+            .col-md-5
+                img.img-fluid(src=`/img/destiny_${response.image}_ln.jpg`, alt=``, sizes="", srcset="")
+            .col-md-7
+                h1 #{pageTitle} 
+                    h6 Departure Date:
+                    p #{response.departure_date}
+                    h6 Return Date:
+                    p #{response.return_date}
+                    h6 Price
+                    p #{response.price}
+                    h6 Available Seat(s)
+                    p #{response.available}
+                    h6 Description
+                    p #{response.description}
