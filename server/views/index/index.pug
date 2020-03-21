@@ -5,4 +5,39 @@ block slider
         h1 Rio de Janero
         em Adventure
 block content
-    h1 Home Page
+    main.container.mt-5
+        h2.text-center.mb-5 About Us
+        .row.mb-5
+            .col-md-6
+                p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas at pulvinar mauris. Duis molestie quis velit quis imperdiet. Nulla ultricies in enim quis varius. Aenean accumsan imperdiet lorem, a eleifend erat lobortis eu. Sed scelerisque gravida nulla sed venenatis. Mauris convallis nibh sit amet porta auctor.
+                p Nam eget congue sapien. Quisque lobortis ligula ac suscipit gravida. Mauris dignissim feugiat augue, ac pretium felis mattis egestas. Nullam sodales turpis vel urna efficitur maximus. Vivamus at magna in purus maximus feugiat vitae ut urna. Etiam ullamcorper euismod vehicula.
+            .col-md-6
+                img(src="/img/about_home.jpg" alt="About Us Image").img-fluid
+    .container
+        .row.upcoming-travels
+                each travel in travels
+                    .col-md-4.col-md-4.md-4
+                        .card.m-3
+                            img.card-img-top.img-fluid(src=`/img/destiny_${travel.image}.jpg` alt=`${travel.title}`)
+                            .card-body
+                                h2 #{travel.title}
+                                h6 Departure Date:
+                                p #{travel.departure_date}
+                                h6 Return Date:
+                                p #{travel.return_date}
+                                h6 Price
+                                p #{travel.price}
+                                h6 Description
+                                p #{travel.description.substring(0,100).concat(' ...')}
+                                a(href=`travel/${travel.id}`).btn.btn-success.btn-block More ...
+
+    .discount
+        .container
+            .row
+                .col-md-6
+                    .content
+                        h2 5% OFF
+                        p.title Travel to Canada
+                        p.date 20th August 2020 - 21 December 2020
+                        p.price $25,000
+

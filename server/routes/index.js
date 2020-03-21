@@ -11,9 +11,13 @@ router.get('/home', (req, res) => {
     res.render("index");
 });
 router.get('/', (req, res) => {
-    res.render("index",{
-        pageTitle : "Home",
-        className : 'home'
+    Travels.findAll({limit: 3})
+    .then((travels)=>{
+        res.render("index",{
+            pageTitle : "Home",
+            className : 'home',
+            travels
+        });
     });
 });
 //About us page
