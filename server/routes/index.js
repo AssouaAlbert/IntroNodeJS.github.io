@@ -23,9 +23,14 @@ router.get('/aboutus', (req, res) => {
 });
 //Testimonials
 router.get('/testimonials', (req, res) => {
-    res.render("testimonials", {
-        pageTitle : "Testimonials"
-    });
+    // Find testimonials and render them on the page
+    Testimonials.findAll()
+        .then((testimonials)=>{
+            res.render("testimonials", {
+                pageTitle : "Testimonials",
+                testimonials
+            });
+        })
 });
     //Travels
 router.get('/travels', (req, res) => {
@@ -71,18 +76,25 @@ router.post('/testimonials', (req, res)=>{
     }
     //Therefore there are errors
     if(errors.length>0){
+        Testimonials.findAll()
+        .then((testimonials)=>{
         //Display the errors on the testimonial page
         res.render("testimonials", {
             pageTitle : "Testimonials",
             errors,
             name,
             email,
-            testimony
-        });
+            testimony,
+            testimonials
+        })});
     }
     else{
         // Insert data into the database
-        
+        Testimonials.create({name,email,testimony})
+            .then(()=>{ //Get the response and redirect the site 
+                res.redirect('/testimonials')
+            })
+            .catch(e=>console.log("Error:", e))
     }
 })
 
