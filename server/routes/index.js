@@ -12,7 +12,8 @@ router.get('/home', (req, res) => {
 });
 router.get('/', (req, res) => {
     res.render("index",{
-        pageTitle : "Home"
+        pageTitle : "Home",
+        className : 'home'
     });
 });
 //About us page
