@@ -2,7 +2,7 @@
 const Travels = require('../models/Travels');
 const Testimonials = require('../models/Testimonials');
 
-exports.homeController = (req, res) => {
+exports.homeController = async  (req, res) => {
     //Alternative 
     // const promise = [];
     // promise.push(Travels.findAll({limit: 3}));
@@ -16,17 +16,16 @@ exports.homeController = (req, res) => {
     //         testimonials: result[1]
     // });
     // });
-    Travels.findAll({limit: 3})
-    .then((travels)=>{
-        Testimonials.findAll({limit:3})
-        .then((testimonials)=>{
-            res.render("index",{
-                pageTitle : "Home",
-                className : 'home',
-                travels,
-                testimonials
-            });
-        });
-    })
+    const travel = await Travels.findAll({limit: 3}).then((travels)=>{
+                        Testimonials.findAll({limit:3})
+                        .then((testimonials)=>{
+                            res.render("index",{
+                                pageTitle : "Home",
+                                className : 'home',
+                                travels,
+                                testimonials
+                            });
+                        });
+                    })
     .catch(e=>console.log("Error: ", e))
 }
